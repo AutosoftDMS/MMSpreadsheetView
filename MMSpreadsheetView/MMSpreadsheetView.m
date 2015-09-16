@@ -340,7 +340,7 @@ const static NSUInteger MMScrollIndicatorTag = 12345;
                                                       self.frame.size.height - MMSpreadsheetViewScrollIndicatorWidth - self.scrollIndicatorInsets.bottom - MMScrollIndicatorDefaultInsetSpace,
                                                       self.frame.size.width - 4*MMSpreadsheetViewScrollIndicatorSpace,
                                                       MMSpreadsheetViewScrollIndicatorWidth);
-    [self updateHorizontalScrollIndicator];
+//    [self updateHorizontalScrollIndicator];
 }
 
 #pragma mark - UIPanGestureRecognizer callbacks
@@ -813,7 +813,7 @@ const static NSUInteger MMScrollIndicatorTag = 12345;
 
 - (void)upperRightCollectionViewDidScrollForScrollView:(UIScrollView *)scrollView {
     [self.lowerRightCollectionView setContentOffset:CGPointMake(scrollView.contentOffset.x, self.lowerRightCollectionView.contentOffset.y) animated:NO];
-    [self updateHorizontalScrollIndicator];
+//    [self updateHorizontalScrollIndicator];
     
     if (scrollView.contentOffset.x <= 0.0f) {
         CGRect rect = self.upperLeftContainerView.frame;
@@ -836,7 +836,7 @@ const static NSUInteger MMScrollIndicatorTag = 12345;
 
 - (void)lowerRightCollectionViewDidScrollForScrollView:(UIScrollView *)scrollView {
     [self updateVerticalScrollIndicator];
-    [self updateHorizontalScrollIndicator];
+//    [self updateHorizontalScrollIndicator];
 
     CGPoint offset = CGPointMake(0.0f, scrollView.contentOffset.y);
     [self.lowerLeftCollectionView setContentOffset:offset animated:NO];
